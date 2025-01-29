@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+#logo {
+    background-image: url('logox.png');
+    background-size: contain; /* Ajusta el tamaño de la imagen para que se ajuste al contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    text-indent: -9999px; /* Oculta el texto */
+    width: 200px; /* Ajusta el ancho según sea necesario */
+    height: 100px; /* Ajusta la altura según sea necesario */
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+/* Estilo para las imágenes de los botones que ocupan todo el espacio del botón */
+.producto-img-full {
+    width: 160px; /* Ancho de la imagen al 100% del botón */
+    height: 180px; /* Alto de la imagen al 100% del botón */
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Elimina cualquier relleno */
+}

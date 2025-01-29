@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llavero Gameboy</title>
+    <style>
+        header {
+            background-image: url('banner.jfif');
+            /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta real de tu imagen */
+            background-size: cover;
+            background-position: center;
+            color: white;
+            /* Cambia el color del texto si es necesario para que sea legible */
+            text-align: center;
+            /* Alinea el texto al centro */
+            padding: 70px 0;
+            /* Espacio interno superior e inferior */
+        }
+
+        header h1 {
+            font-size: 70px;
+            /* Tamaño de fuente */
+            font-family: 'Monospace', sans-serif;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Fondo semi-transparente */
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        /* Estilo para los botones de productos */
+        .productos-container {
+            text-align: center;
+            /* Centra los botones */
+        }
+
+        .producto-btn {
+            display: inline-block;
+            margin: 20px;
+            padding: 80px 80px;
+            /* Aumenta el padding para hacer el botón más grande */
+            border: none;
+            border-radius: 0;
+            /* Quita el redondeo para hacerlo cuadrado */
+            background-color: red;
+            /* Cambia el color del fondo a rojo */
+            color: white;
+            /* Color del texto */
+            font-size: 20px;
+            /* Ajusta el tamaño del texto */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .producto-btn:hover {
+            background-color: darkred;
+            /* Cambia el color de fondo al pasar el ratón */
+        }
+
+        /* Estilo para las imágenes de los botones */
+        .producto-img {
+            width: 100px;
+            /* Ancho de la imagen */
+            height: auto;
+            /* Altura automática para mantener la proporción */
+            margin-right: 10px;
+            /* Espacio entre la imagen y el texto del botón */
+            vertical-align: middle;
+            /* Alinea verticalmente la imagen */
+        }
+
+        /* Estilo para el área de "Conócenos" */
+        .conocenos {
+            background-color: #f0f0f0;
+            /* Color de fondo */
+            padding: 50px 20px;
+            /* Espaciado interno */
+            text-align: center;
+            /* Alinea el texto al centro */
+            margin-top: 20px;
+            /* Espacio superior */
+        }
+
+        .conocenos h2,
+        .conocenos h3 {
+            margin: 0 auto;
+            /* Centra horizontalmente */
+            max-width: 800px;
+            /* Establece un ancho máximo para el texto */
+        }
+
+        .llaveros-barra {
+            background-color: #111;
+            /* Color de fondo de la barra */
+            color: white;
+            /* Color del texto */
+            padding: 20px 0;
+            /* Espaciado interno */
+            text-align: center;
+            /* Alinea el texto al centro */
+        }
+
+        /* Estilos para el carrusel */
+        .carousel {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            height: 400px;
+            /* Ajusta la altura según tus necesidades */
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Estilos para los controles */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border: none;
+            z-index: 2;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .product-img {
+            max-width: 300px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .product-info {
+            flex-grow: 1;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-right: 10px;
+        }
+
+        .btn-primary {
+            background-color: #ff0000;
+            color: #fff;
+        }
+
+        .btn-secondary {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .btn-tertiary {
+            background-color: #666;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Llavero Nintendo GameBoy</h1>
+    </center>
+    <nav>
+        <ul>
+            <li><a href="#/home">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#/contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="container">
+        <img src="stk2.png" alt="Producto" class="product-img">
+        <div class="product-info">
+            <p>Descubre nuestro sticker de la NASA, ideal para los apasionados del espacio y la exploración. Este
+                sticker de alta calidad presenta el icónico logotipo de la NASA, con su distintiva esfera azul, vector
+                rojo y estrellas blancas. Fabricado con materiales duraderos y resistentes al agua.
+                <br>
+                <br>
+                Celebra la grandeza de la exploración espacial y muestra tu apoyo a la NASA con
+                este elegante y simbólico sticker. ¡Añádelo a tu colección!
+            </p>
+
+            <br>
+            <br>
+
+            <button class="btn btn-primary" onclick="agregarAlCarrito()">Agregar al carrito</button>
+            <br>
+            <br>
+            <button class="btn btn-secondary" onclick="salirDelProducto()">Salir del producto</button>
+            <br>
+            <br>
+            <button class="btn btn-tertiary" onclick="window.location.href='stick3_info.html'">Siguiente
+                producto</button>
+        </div>
+    </div>
+
+    <script>
+        function agregarAlCarrito() {
+            alert("¡Producto agregado al carrito!");
+            // Aquí puedes agregar la lógica adicional para agregar el producto al carrito de compras
+        }
+
+        function salirDelProducto() {
+            window.location.href = 'index.php';
+        }
+
+        function siguienteProducto() {
+            currentIndex = (currentIndex + 1) % productos.length;
+            const productoActual = productos[currentIndex];
+            document.getElementById('product-img').src = productoActual.img;
+            document.querySelector('.product-info p').innerText = productoActual.descripcion;
+        }
+    </script>
+</body>
+
+</html>
